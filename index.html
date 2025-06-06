@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skye Attorneys</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #0D1B2A;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header img {
+      max-height: 100px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #0D1B2A;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0D1B2A;
+    }
+    form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #0077cc;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Skye Attorneys Logo">
+    <h1>Skye Attorneys</h1>
+    <p>Justice. Dignity. Results.</p>
+  </header>
+
+  <div class="container">
+    <h2>File a Legal Case</h2>
+    <form action="/api/cases/file" method="POST">
+      <label for="userEmail">Email</label>
+      <input type="email" name="userEmail" required>
+
+      <label for="type">Case Type</label>
+      <select name="type" required>
+        <option>Sexual Abuse</option>
+        <option>Labour Dispute</option>
+        <option>Unfair Dismissal</option>
+        <option>Unfair Divorce</option>
+        <option>Child Custody</option>
+        <option>Property Dispute</option>
+        <option>Contract Breach</option>
+        <option>Criminal Defense</option>
+      </select>
+
+      <label for="details">Case Details</label>
+      <textarea name="details" rows="5" required></textarea>
+
+      <button type="submit">Submit Case</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; Skye Attorneys 2025. All rights reserved.
+  </footer>
+</body>
+</html>
